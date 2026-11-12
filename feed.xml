@@ -120,6 +120,19 @@ This product is being used by thousands of customers, do not cut any corners.&lt
       <category>visuals</category>
     </item>
     <item>
+      <title>Map the codebase into ARCHITECTURE.md</title>
+      <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#map-codebase-architecture</link>
+      <guid isPermaLink="false">urn:prompt-collection:map-codebase-architecture</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;A project has grown messy and you want a written map of its structure, data flow, and riskiest files.&lt;/p&gt;&lt;pre&gt;Map this codebase for me. Show the folder structure, what each main file does, how data flows from UI to database, and the 5 riskiest files to touch. Write it all to ARCHITECTURE.md.&lt;/pre&gt;&lt;p&gt;Source: &lt;a href="https://x.com/mdjunaidap/status/2119844974019973308"&gt;@mdjunaidap&lt;/a&gt; (unverified)&lt;/p&gt;</description>
+      <category>Codebase audits and simplification</category>
+      <category>architecture</category>
+      <category>documentation</category>
+      <category>onboarding</category>
+      <category>codebase-map</category>
+      <category>data-flow</category>
+    </item>
+    <item>
       <title>Recover the minimal semantic model</title>
       <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#minimal-semantic-model</link>
       <guid isPermaLink="false">urn:prompt-collection:minimal-semantic-model</guid>

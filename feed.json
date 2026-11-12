@@ -311,6 +311,41 @@
       ]
     },
     {
+      "id": "urn:prompt-collection:map-codebase-architecture",
+      "url": "https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#map-codebase-architecture",
+      "title": "Map the codebase into ARCHITECTURE.md",
+      "content_text": "Map this codebase for me. Show the folder structure, what each main file does, how data flows from UI to database, and the 5 riskiest files to touch. Write it all to ARCHITECTURE.md.",
+      "summary": "A project has grown messy and you want a written map of its structure, data flow, and riskiest files.",
+      "date_published": "2026-11-12T00:00:00+00:00",
+      "tags": [
+        "Codebase audits and simplification",
+        "architecture",
+        "documentation",
+        "onboarding",
+        "codebase-map",
+        "data-flow"
+      ],
+      "_prompt": {
+        "id": "map-codebase-architecture",
+        "category": "Codebase audits and simplification",
+        "use_when": "A project has grown messy and you want a written map of its structure, data flow, and riskiest files.",
+        "scope": "project",
+        "added_on": "2026-11-12",
+        "source": {
+          "url": "https://x.com/mdjunaidap/status/2119844974019973308",
+          "author": "@mdjunaidap",
+          "status": "unverified"
+        },
+        "text_kind": "collected"
+      },
+      "external_url": "https://x.com/mdjunaidap/status/2119844974019973308",
+      "authors": [
+        {
+          "name": "@mdjunaidap"
+        }
+      ]
+    },
+    {
       "id": "urn:prompt-collection:minimal-semantic-model",
       "url": "https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#minimal-semantic-model",
       "title": "Recover the minimal semantic model",

@@ -417,6 +417,27 @@
         "author": "@nateberkopec",
         "status": "unverified"
       }
+    },
+    {
+      "id": "map-codebase-architecture",
+      "title": "Map the codebase into ARCHITECTURE.md",
+      "category": "Codebase audits and simplification",
+      "tags": [
+        "architecture",
+        "documentation",
+        "onboarding",
+        "codebase-map",
+        "data-flow"
+      ],
+      "use_when": "A project has grown messy and you want a written map of its structure, data flow, and riskiest files.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "Map this codebase for me. Show the folder structure, what each main file does, how data flows from UI to database, and the 5 riskiest files to touch. Write it all to ARCHITECTURE.md.",
+      "source": {
+        "url": "https://x.com/mdjunaidap/status/2119844974019973308",
+        "author": "@mdjunaidap",
+        "status": "unverified"
+      }
     }
   ]
 }

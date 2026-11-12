@@ -93,6 +93,18 @@ Source: [@aarondfrancis](https://gist.github.com/aarondfrancis/8735edbe48532f97e
 
 Related tweet: [https://x.com/aarondfrancis/status/2088285625946370352](https://x.com/aarondfrancis/status/2088285625946370352) (unverified)
 
+<a id="map-codebase-architecture"></a>
+
+### Map the codebase into ARCHITECTURE.md
+
+A project has grown messy and you want a written map of its structure, data flow, and riskiest files.
+
+```text
+Map this codebase for me. Show the folder structure, what each main file does, how data flows from UI to database, and the 5 riskiest files to touch. Write it all to ARCHITECTURE.md.
+```
+
+Source: [@mdjunaidap](https://x.com/mdjunaidap/status/2119844974019973308) (unverified)
+
 ## State machines and semantics
 
 <a id="find-state-machines"></a>
