@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "title": "prompt-collection",
+  "description": "Prompts collected from X for context-aware suggestions.",
+  "prompts": [
+    {
+      "id": "browser-testing",
+      "title": "Browser testing across widths, touch, and slow networks",
+      "category": "Testing and verification",
+      "tags": [
+        "browser",
+        "responsive",
+        "touch",
+        "network",
+        "testing"
+      ],
+      "use_when": "A web interface needs verification across screen sizes, touch input, and slow connections.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "Test this in the browser at different widths, with touch emulation, and on a throttled 3G connection. Fix anything that looks broken or feels off. Save a before and after screenshot for every fix and send me a summary afterwards.",
+      "source": {
+        "url": "https://x.com/emilkowalski/status/2120508498236596597",
+        "author": "@emilkowalski",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "e2e-proof",
+      "title": "End-to-end proof",
+      "category": "Testing and verification",
+      "tags": [
+        "testing",
+        "e2e",
+        "verification"
+      ],
+      "use_when": "A completed feature needs end-to-end evidence that it works.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "test this e2e & give me irrefutable proof it works",
+      "source": {
+        "url": "https://x.com/thorstenball/status/2102623376196194763",
+        "author": "@thorstenball",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "single-source-of-truth",
+      "title": "Single source of truth audit",
+      "category": "Codebase audits and simplification",
+      "tags": [
+        "audit",
+        "state",
+        "duplication",
+        "consistency"
+      ],
+      "use_when": "The same fact or configuration may be maintained in multiple places.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "single source of truth audit",
+      "source": {
+        "url": "https://x.com/kitlangton/status/2120341112959455559",
+        "author": "@kitlangton",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "full-project-audit",
+      "title": "Full project audit",
+      "category": "Codebase audits and simplification",
+      "tags": [
+        "audit",
+        "bugs",
+        "cleanup",
+        "consistency"
+      ],
+      "use_when": "A project needs a broad review of correctness, consistency, and unnecessary work.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "Read this entire project and find everything that's broken, inconsistent, inefficient, or no longer needed. Fix what you're sure about and list the rest for me to review.",
+      "source": {
+        "url": "https://x.com/chenchengpro/status/2120040764243894547",
+        "author": "@chenchengpro",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "delete-and-simplify",
+      "title": "Delete, simplify, optimize, automate",
+      "category": "Codebase audits and simplification",
+      "tags": [
+        "audit",
+        "architecture",
+        "simplification",
+        "assumptions"
+      ],
+      "use_when": "Complexity or weak assumptions make a codebase harder to maintain.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "I want you to audit our codebase, is anything here unnecessary, overly complicated in our current setup, or based on weak assumptions? Challenge them.\n\n- What can be deleted entirely?\n- What can be simplified now that unnecessary pieces are gone?\n\nThen make the changes. Prefer deleting over simplifying, simplifying over optimizing, and optimizing over automating.\n\nThis product is being used by thousands of customers, do not cut any corners.",
+      "source": {
+        "url": "https://x.com/anthonyriera/status/2119870644514893997",
+        "author": "@anthonyriera",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "find-state-machines",
+      "title": "Find implicit state machines",
+      "category": "State machines and semantics",
+      "tags": [
+        "state-machines",
+        "state",
+        "architecture"
+      ],
+      "use_when": "An app has behavior that depends on changing state and events.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "find all of the implicit state machines in my app",
+      "source": {
+        "url": "https://x.com/steveruizok/status/2116552016218710389",
+        "author": "@steveruizok",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "make-state-machines-explicit",
+      "title": "Make useful state machines explicit",
+      "category": "State machines and semantics",
+      "tags": [
+        "state-machines",
+        "refactoring",
+        "visuals"
+      ],
+      "use_when": "Implicit state transitions may benefit from explicit modeling; the prompt references lavish-axi.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "audit and find implicit state machines in this <codebase/directory/module> that would drive concrete improvements if made explicit. explain before/after of each one and discuss with me in lavish-axi. fewer words, big visuals",
+      "source": {
+        "url": "https://x.com/kunchenguid/status/2119924895060795492",
+        "author": "@kunchenguid",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "minimal-semantic-model",
+      "title": "Recover the minimal semantic model",
+      "category": "State machines and semantics",
+      "tags": [
+        "state",
+        "concurrency",
+        "invariants",
+        "refactoring"
+      ],
+      "use_when": "Async behavior, duplicated state, or refactors need semantic analysis.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "Recover my program's minimal semantic model.\n\n1. State: every value that changes what the user sees\n2. Transitions: what commutes, what's idempotent, what's order-dependent\n3. Dependencies: what must be true before each effect fires\n\nThen find:\n→ nondeterminism in awaits, retries and event order\n→ invariants enforced by hope\n→ one fact stored in two places, drifting\n→ work that never reaches the screen\n\nLast, split my refactors into \"provably equivalent\" and \"trust me\". For each \"trust me\", give the smallest input that breaks it.",
+      "source": {
+        "url": "https://x.com/infinterenders/status/2119676620680339490",
+        "author": "@infinterenders",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "document-state-machines",
+      "title": "Document state machines and fix reachable bugs",
+      "category": "State machines and semantics",
+      "tags": [
+        "state-machines",
+        "concurrency",
+        "bugs",
+        "regression-tests"
+      ],
+      "use_when": "Reachable invalid states need evidence, documentation, and regression-tested fixes.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "Find the app’s explicit and implicit state machines and document their states, invariants, and transition tables in one file. Identify invalid states or transitions the code can actually reach, with evidence, including through retries and concurrency. Prioritize confirmed bugs by impact, group related fixes into issues, then fix them with regression tests and keep the document updated.",
+      "source": {
+        "url": "https://x.com/trevin/status/2118690987153186845",
+        "author": "@trevin",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "simple-ux-dx-ax",
+      "title": "Simplicity across UX, DX, and AX",
+      "category": "Design and experience",
+      "tags": [
+        "design",
+        "ux",
+        "dx",
+        "ax",
+        "simplicity"
+      ],
+      "use_when": "An interface or implementation feels cluttered or unnecessarily complex.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "I want this to be as perfect as Linear's website or Apple Notes: simple purpose, simple architecture, simple design, simple implementation. Cut taglines, helper text and secondary labels. If a screen needs them to make sense, fix the layout. Every decision should elevate the user experience (UX), developer experience (DX) and agent experience (AX) at once, without breaking anything.",
+      "source": {
+        "url": "https://x.com/Voxyz_ai/status/2117281830449942825",
+        "author": "@Voxyz_ai",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "select-database-fields",
+      "title": "Select only the database fields you need",
+      "category": "Performance",
+      "tags": [
+        "database",
+        "queries",
+        "performance"
+      ],
+      "use_when": "Database queries fetch whole rows while using only a few fields.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "find every place we load a whole row from the database just to read a couple of fields. instead, select only what we need",
+      "source": {
+        "url": null,
+        "author": null,
+        "status": "missing"
+      }
+    },
+    {
+      "id": "unnecessary-url-parsing",
+      "title": "Remove unnecessary URL parsing",
+      "category": "Performance",
+      "tags": [
+        "performance",
+        "url",
+        "parsing"
+      ],
+      "use_when": "Repeated or redundant URL parsing may add unnecessary work.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "remove all unnecessary `new URL()` parsing",
+      "source": {
+        "url": "https://x.com/_dylanga/status/2117400205314421058",
+        "author": "@_dylanga",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "module-level-regexes",
+      "title": "Compute regexes at module level",
+      "category": "Performance",
+      "tags": [
+        "performance",
+        "regex",
+        "hot-paths"
+      ],
+      "use_when": "Regexes are repeatedly constructed in functions or loops.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "compute all regexes at the module level instead of inside functions and loops",
+      "source": {
+        "url": "https://x.com/_dylanga/status/2117400205314421058",
+        "author": "@_dylanga",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "jsonb-key-to-column",
+      "title": "Promote hot JSONB keys to columns",
+      "category": "Performance",
+      "tags": [
+        "database",
+        "postgresql",
+        "jsonb",
+        "hot-paths"
+      ],
+      "use_when": "A hot path repeatedly reads a single key from a large JSONB value.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "find hot-path reads of a single key from a large jsonb column and promote that key to a real column",
+      "source": {
+        "url": "https://x.com/_dylanga/status/2117400205314421058",
+        "author": "@_dylanga",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "parallel-async-calls",
+      "title": "Remove unnecessary sequential async calls",
+      "category": "Performance",
+      "tags": [
+        "performance",
+        "async",
+        "concurrency",
+        "hot-paths"
+      ],
+      "use_when": "Independent async operations appear to run sequentially on hot paths.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "do a deep scan of all hot paths and fix any unnecessary sequential async function calls",
+      "source": {
+        "url": "https://x.com/_dylanga/status/2117099613022732412",
+        "author": "@_dylanga",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "security-audit-dashboard",
+      "title": "Security audit, remediation, and dashboard",
+      "category": "Security and system cleanup",
+      "tags": [
+        "security",
+        "audit",
+        "remediation",
+        "dashboard"
+      ],
+      "use_when": "A project needs a security audit and evidence of remediation; the prompt references an external Cloudflare skill.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "Install Cloudflare’s security-audit skill globally and invoke its full audit workflow on this project.\n\ngithub.com/cloudflare/sec — https://t.co/PoZZnDNiPy\n\nPlease implement this skill for my project repos or globally in my projects.\n\nIndependently verify findings, implement targeted fixes for confirmed vulnerabilities, and run relevant tests. Preserve unrelated changes.\n\nBuild an interactive security dashboard covering frontend, APIs, authentication, databases, infrastructure and dependencies. Show:\n- Findings by severity and affected stack layer.\n- Open, fixed and verified remediation status.\n- Security posture before and after fixes.\n- Source evidence, code changes and test results.\n- Audit coverage, unverified areas and remaining priorities.\n\nBase posture assessments on evidence and clearly label coverage gaps.",
+      "source": {
+        "url": "https://x.com/thejoegardiner/status/2118119394517950725",
+        "author": "@thejoegardiner",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "macos-cleanup",
+      "title": "Remove unused macOS software and permissions",
+      "category": "Security and system cleanup",
+      "tags": [
+        "macos",
+        "cleanup",
+        "permissions",
+        "software"
+      ],
+      "use_when": "The user explicitly wants to review and remove unused macOS software and permissions.",
+      "scope": "machine",
+      "added_on": "2026-11-12",
+      "prompt": "remove all the apps, tcc/permission grants, login items, daemons, kexts, browser exts, homebrew packages, etc., that I don't need and use.",
+      "source": {
+        "url": "https://x.com/sqs/status/2120113139996086409",
+        "author": "@sqs",
+        "status": "unverified"
+      }
+    },
+    {
+      "id": "read-only-codebase-simplification-audit",
+      "title": "Read-only codebase simplification audit (summary)",
+      "category": "Codebase audits and simplification",
+      "tags": [
+        "audit",
+        "architecture",
+        "state-modeling",
+        "data-structures",
+        "read-only"
+      ],
+      "use_when": "You want evidence-backed simplification recommendations before authorizing code changes.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "text_kind": "summary",
+      "prompt": "Review the repository without changing it. Map its subsystems and boundaries, then examine each for worthwhile improvements to data structures, state representation, algorithms, control flow, and ownership. Use bounded, independent reviews where available. Keep a shared coverage record, including explicit decisions that no change is warranted.\n\nLimit each subsystem to two strong recommendations, supported by file references, proposed changes, scope, risks, validation needs, and confidence. Independently check findings, remove duplicates and weak abstractions, and review coverage before ranking recommendations by impact and dependencies. Do not implement changes or run tests during the audit.\n\nThis is an editorial summary. Read the linked gist for the complete workflow.",
+      "source": {
+        "url": "https://gist.github.com/aarondfrancis/8735edbe48532f97ee5ea818db4dbd47",
+        "author": "@aarondfrancis",
+        "status": "verified",
+        "related_urls": [
+          {
+            "url": "https://x.com/aarondfrancis/status/2088285625946370352",
+            "label": "Related tweet",
+            "status": "unverified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "product-experience-coverage-audit",
+      "title": "Product experience coverage audit (summary)",
+      "category": "Design and experience",
+      "tags": [
+        "audit",
+        "ux",
+        "accessibility",
+        "responsive",
+        "design-system",
+        "read-only"
+      ],
+      "use_when": "You need a product-wide UX review with an actionable handoff for product, design, and engineering.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "text_kind": "summary",
+      "prompt": "Assess the current product without modifying its repository. Establish its users, goals, and constraints from workspace evidence. Track coverage of screens, states, and complete journeys, combining code inspection with safe runtime observation. Focus on desktop and tablet, including keyboard, touch, accessibility, and recovery behavior; phone optimization is generally excluded.\n\nCoordinate bounded reviews, keeping shared browser sessions serialized. Support recommendations with concrete user consequences, screenshots where useful, implementation references, acceptance criteria, and validation needs. Check design-system ownership and only use competitor examples for demonstrated, contained gaps. Independently verify findings, record inaccessible or unverified areas, and prioritize small implementation slices with cross-functional handoffs.\n\nThis is an editorial summary. Read the linked gist for the complete workflow.",
+      "source": {
+        "url": "https://gist.github.com/tommymarshall/c8e25407aecd111573766c9f1456a412",
+        "author": "@tommymarshall",
+        "status": "verified",
+        "related_urls": [
+          {
+            "url": "https://x.com/tommyjmarshall/status/2091681150552989700",
+            "label": "Related tweet",
+            "status": "unverified"
+          }
+        ]
+      }
+    },
+    {
+      "id": "weekly-session-review",
+      "title": "Review last week's sessions and suggest improvements",
+      "category": "Agent workflows and retrospectives",
+      "tags": [
+        "sessions",
+        "retrospective",
+        "workflow",
+        "continuous-improvement"
+      ],
+      "use_when": "Recent coding sessions are available and the user wants to identify ways to improve their workflow.",
+      "scope": "project",
+      "added_on": "2026-11-12",
+      "prompt": "look at last weeks sessions and suggest improvements",
+      "source": {
+        "url": "https://x.com/nateberkopec/status/2114842635743674790",
+        "author": "@nateberkopec",
+        "status": "unverified"
+      }
+    }
+  ]
+}
