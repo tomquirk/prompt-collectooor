@@ -304,6 +304,18 @@ remove all the apps, tcc/permission grants, login items, daemons, kexts, browser
 
 Source: [@sqs](https://x.com/sqs/status/2120113139996086409) (unverified)
 
+<a id="prune-old-agent-transcripts"></a>
+
+### Audit and prune old AI agent transcripts on macOS
+
+The user wants to review and remove old coding-agent transcripts, session logs, and leftover editor folders on a Mac.
+
+```text
+Audit my Mac for AI agent transcripts (Claude, Codex, Cursor, Grok), SQLite session logs, and leftover editor dotfolders older than 30 days. Show me the sizes first, delete everything >30 days old, and add a daily 30-day auto-prune check.
+```
+
+Source: [@illyism](https://x.com/illyism/status/2117103631564689691) (verified)
+
 ## Agent workflows and retrospectives
 
 <a id="weekly-session-review"></a>
