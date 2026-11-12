@@ -292,6 +292,86 @@ remove all the apps, tcc/permission grants, login items, daemons, kexts, browser
 
 Source: [@sqs](https://x.com/sqs/status/2120113139996086409) (unverified)
 
+<a id="live-web-app-security-audit"></a>
+
+### Read-only security audit of a live web app
+
+A web app or SaaS is live (or about to launch) and you want an evidence-based audit of auth, APIs, database access, config, and business logic before fixing anything.
+
+```text
+My web application is live. Act as a Senior Application Security Engineer and perform a thorough security audit.
+
+Don't give me generic security advice. Inspect the actual codebase, trace important code paths, and identify vulnerabilities that could put user accounts, data, or business operations at risk.
+
+1. Authentication & Authorization
+- Review login, signup, logout, and session handling.
+- Verify that permissions are checked on the server.
+- Check whether users can access other users' private data.
+- Look for IDOR and Broken Object Level Authorization (BOLA).
+- Test whether normal users can access admin-only endpoints.
+- Review password reset and email verification flows.
+- Check session expiration and token handling.
+
+2. API & Backend Security
+- Inspect every important API endpoint.
+- Check for SQL injection and unsafe database queries.
+- Look for XSS, CSRF, and SSRF vulnerabilities.
+- Check for mass assignment and privilege escalation.
+- Validate all user-controlled input on the server.
+- Review file uploads, downloads, and access permissions.
+- Check whether sensitive endpoints have proper rate limits.
+- Verify webhook signatures and prevent replay or duplicate processing where applicable.
+
+3. Database & Secrets
+- Review database permissions and Row Level Security policies.
+- Check whether RLS is enabled and correctly enforced where required.
+- Look for exposed API keys, credentials, and private environment variables.
+- Check whether frontend code exposes sensitive backend information.
+- Verify that users can only read and modify records they're authorised to access.
+- Review database functions and privileged operations.
+
+4. Configuration & Infrastructure
+- Review CORS configuration.
+- Check security headers and cookie settings.
+- Look for insecure redirects and exposed internal endpoints.
+- Review dependency vulnerabilities.
+- Check production and development environment separation.
+- Inspect error handling for leaked stack traces or sensitive information.
+- Make sure application logs don't contain passwords, tokens, or private user data.
+
+5. Business Logic
+- Check whether users can bypass payment or subscription restrictions.
+- Look for ways to manipulate prices, quantities, or account privileges.
+- Test whether users can repeat actions that should only happen once.
+- Check whether ownership is verified before modifying or deleting records.
+- Review invitation, referral, and account management flows where applicable.
+
+IMPORTANT INSTRUCTIONS:
+- Start with a read-only audit.
+- Only test systems I own or am explicitly authorised to assess.
+- Use local or staging environments and test accounts wherever possible.
+- Never expose actual secrets in your report.
+- Don't delete data or change production configuration.
+- Don't disable existing security protections.
+- Don't claim a vulnerability exists without evidence.
+- Don't automatically change code during the audit.
+
+For every confirmed issue, provide:
+- Severity: Critical, High, Medium, or Low.
+- Exact file and code location.
+- What the vulnerability is.
+- How it could be exploited.
+- What data or functionality is at risk.
+- The recommended fix.
+- A test to verify that the fix works.
+
+Finally, rank the issues by priority and give me a practical remediation plan.
+
+After I approve the fixes, implement them in a separate development branch, add regression tests, and show me the changes. Never deploy without explicit approval.
+```
+
+Source: [@Sujay__Raj](https://x.com/Sujay__Raj/status/2120831910675145189) (verified)
+
 ## Agent workflows and retrospectives
 
 <a id="weekly-session-review"></a>

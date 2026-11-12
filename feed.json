@@ -7,6 +7,41 @@
   "language": "en",
   "items": [
     {
+      "id": "urn:prompt-collection:live-web-app-security-audit",
+      "url": "https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#live-web-app-security-audit",
+      "title": "Read-only security audit of a live web app",
+      "content_text": "My web application is live. Act as a Senior Application Security Engineer and perform a thorough security audit.\n\nDon't give me generic security advice. Inspect the actual codebase, trace important code paths, and identify vulnerabilities that could put user accounts, data, or business operations at risk.\n\n1. Authentication & Authorization\n- Review login, signup, logout, and session handling.\n- Verify that permissions are checked on the server.\n- Check whether users can access other users' private data.\n- Look for IDOR and Broken Object Level Authorization (BOLA).\n- Test whether normal users can access admin-only endpoints.\n- Review password reset and email verification flows.\n- Check session expiration and token handling.\n\n2. API & Backend Security\n- Inspect every important API endpoint.\n- Check for SQL injection and unsafe database queries.\n- Look for XSS, CSRF, and SSRF vulnerabilities.\n- Check for mass assignment and privilege escalation.\n- Validate all user-controlled input on the server.\n- Review file uploads, downloads, and access permissions.\n- Check whether sensitive endpoints have proper rate limits.\n- Verify webhook signatures and prevent replay or duplicate processing where applicable.\n\n3. Database & Secrets\n- Review database permissions and Row Level Security policies.\n- Check whether RLS is enabled and correctly enforced where required.\n- Look for exposed API keys, credentials, and private environment variables.\n- Check whether frontend code exposes sensitive backend information.\n- Verify that users can only read and modify records they're authorised to access.\n- Review database functions and privileged operations.\n\n4. Configuration & Infrastructure\n- Review CORS configuration.\n- Check security headers and cookie settings.\n- Look for insecure redirects and exposed internal endpoints.\n- Review dependency vulnerabilities.\n- Check production and development environment separation.\n- Inspect error handling for leaked stack traces or sensitive information.\n- Make sure application logs don't contain passwords, tokens, or private user data.\n\n5. Business Logic\n- Check whether users can bypass payment or subscription restrictions.\n- Look for ways to manipulate prices, quantities, or account privileges.\n- Test whether users can repeat actions that should only happen once.\n- Check whether ownership is verified before modifying or deleting records.\n- Review invitation, referral, and account management flows where applicable.\n\nIMPORTANT INSTRUCTIONS:\n- Start with a read-only audit.\n- Only test systems I own or am explicitly authorised to assess.\n- Use local or staging environments and test accounts wherever possible.\n- Never expose actual secrets in your report.\n- Don't delete data or change production configuration.\n- Don't disable existing security protections.\n- Don't claim a vulnerability exists without evidence.\n- Don't automatically change code during the audit.\n\nFor every confirmed issue, provide:\n- Severity: Critical, High, Medium, or Low.\n- Exact file and code location.\n- What the vulnerability is.\n- How it could be exploited.\n- What data or functionality is at risk.\n- The recommended fix.\n- A test to verify that the fix works.\n\nFinally, rank the issues by priority and give me a practical remediation plan.\n\nAfter I approve the fixes, implement them in a separate development branch, add regression tests, and show me the changes. Never deploy without explicit approval.",
+      "summary": "A web app or SaaS is live (or about to launch) and you want an evidence-based audit of auth, APIs, database access, config, and business logic before fixing anything.",
+      "date_published": "2026-11-13T00:00:00+00:00",
+      "tags": [
+        "Security and system cleanup",
+        "security",
+        "audit",
+        "authorization",
+        "web-app",
+        "remediation"
+      ],
+      "_prompt": {
+        "id": "live-web-app-security-audit",
+        "category": "Security and system cleanup",
+        "use_when": "A web app or SaaS is live (or about to launch) and you want an evidence-based audit of auth, APIs, database access, config, and business logic before fixing anything.",
+        "scope": "project",
+        "added_on": "2026-11-13",
+        "source": {
+          "url": "https://x.com/Sujay__Raj/status/2120831910675145189",
+          "author": "@Sujay__Raj",
+          "status": "verified"
+        },
+        "text_kind": "collected"
+      },
+      "external_url": "https://x.com/Sujay__Raj/status/2120831910675145189",
+      "authors": [
+        {
+          "name": "@Sujay__Raj"
+        }
+      ]
+    },
+    {
       "id": "urn:prompt-collection:browser-testing",
       "url": "https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#browser-testing",
       "title": "Browser testing across widths, touch, and slow networks",

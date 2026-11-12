@@ -7,6 +7,87 @@
     <language>en</language>
     <atom:link href="https://raw.githubusercontent.com/tomquirk/prompt-collection/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Read-only security audit of a live web app</title>
+      <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#live-web-app-security-audit</link>
+      <guid isPermaLink="false">urn:prompt-collection:live-web-app-security-audit</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;A web app or SaaS is live (or about to launch) and you want an evidence-based audit of auth, APIs, database access, config, and business logic before fixing anything.&lt;/p&gt;&lt;pre&gt;My web application is live. Act as a Senior Application Security Engineer and perform a thorough security audit.
+
+Don&amp;#x27;t give me generic security advice. Inspect the actual codebase, trace important code paths, and identify vulnerabilities that could put user accounts, data, or business operations at risk.
+
+1. Authentication &amp;amp; Authorization
+- Review login, signup, logout, and session handling.
+- Verify that permissions are checked on the server.
+- Check whether users can access other users&amp;#x27; private data.
+- Look for IDOR and Broken Object Level Authorization (BOLA).
+- Test whether normal users can access admin-only endpoints.
+- Review password reset and email verification flows.
+- Check session expiration and token handling.
+
+2. API &amp;amp; Backend Security
+- Inspect every important API endpoint.
+- Check for SQL injection and unsafe database queries.
+- Look for XSS, CSRF, and SSRF vulnerabilities.
+- Check for mass assignment and privilege escalation.
+- Validate all user-controlled input on the server.
+- Review file uploads, downloads, and access permissions.
+- Check whether sensitive endpoints have proper rate limits.
+- Verify webhook signatures and prevent replay or duplicate processing where applicable.
+
+3. Database &amp;amp; Secrets
+- Review database permissions and Row Level Security policies.
+- Check whether RLS is enabled and correctly enforced where required.
+- Look for exposed API keys, credentials, and private environment variables.
+- Check whether frontend code exposes sensitive backend information.
+- Verify that users can only read and modify records they&amp;#x27;re authorised to access.
+- Review database functions and privileged operations.
+
+4. Configuration &amp;amp; Infrastructure
+- Review CORS configuration.
+- Check security headers and cookie settings.
+- Look for insecure redirects and exposed internal endpoints.
+- Review dependency vulnerabilities.
+- Check production and development environment separation.
+- Inspect error handling for leaked stack traces or sensitive information.
+- Make sure application logs don&amp;#x27;t contain passwords, tokens, or private user data.
+
+5. Business Logic
+- Check whether users can bypass payment or subscription restrictions.
+- Look for ways to manipulate prices, quantities, or account privileges.
+- Test whether users can repeat actions that should only happen once.
+- Check whether ownership is verified before modifying or deleting records.
+- Review invitation, referral, and account management flows where applicable.
+
+IMPORTANT INSTRUCTIONS:
+- Start with a read-only audit.
+- Only test systems I own or am explicitly authorised to assess.
+- Use local or staging environments and test accounts wherever possible.
+- Never expose actual secrets in your report.
+- Don&amp;#x27;t delete data or change production configuration.
+- Don&amp;#x27;t disable existing security protections.
+- Don&amp;#x27;t claim a vulnerability exists without evidence.
+- Don&amp;#x27;t automatically change code during the audit.
+
+For every confirmed issue, provide:
+- Severity: Critical, High, Medium, or Low.
+- Exact file and code location.
+- What the vulnerability is.
+- How it could be exploited.
+- What data or functionality is at risk.
+- The recommended fix.
+- A test to verify that the fix works.
+
+Finally, rank the issues by priority and give me a practical remediation plan.
+
+After I approve the fixes, implement them in a separate development branch, add regression tests, and show me the changes. Never deploy without explicit approval.&lt;/pre&gt;&lt;p&gt;Source: &lt;a href="https://x.com/Sujay__Raj/status/2120831910675145189"&gt;@Sujay__Raj&lt;/a&gt; (verified)&lt;/p&gt;</description>
+      <category>Security and system cleanup</category>
+      <category>security</category>
+      <category>audit</category>
+      <category>authorization</category>
+      <category>web-app</category>
+      <category>remediation</category>
+    </item>
+    <item>
       <title>Browser testing across widths, touch, and slow networks</title>
       <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#browser-testing</link>
       <guid isPermaLink="false">urn:prompt-collection:browser-testing</guid>
