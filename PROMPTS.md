@@ -93,6 +93,18 @@ Source: [@aarondfrancis](https://gist.github.com/aarondfrancis/8735edbe48532f97e
 
 Related tweet: [https://x.com/aarondfrancis/status/2088285625946370352](https://x.com/aarondfrancis/status/2088285625946370352) (unverified)
 
+<a id="map-codebase-architecture"></a>
+
+### Map the codebase into ARCHITECTURE.md
+
+A project has grown messy and you want a written map of its structure, data flow, and riskiest files.
+
+```text
+Map this codebase for me. Show the folder structure, what each main file does, how data flows from UI to database, and the 5 riskiest files to touch. Write it all to ARCHITECTURE.md.
+```
+
+Source: [@mdjunaidap](https://x.com/mdjunaidap/status/2119844974019973308) (unverified)
+
 ## State machines and semantics
 
 <a id="find-state-machines"></a>
@@ -291,6 +303,18 @@ remove all the apps, tcc/permission grants, login items, daemons, kexts, browser
 ```
 
 Source: [@sqs](https://x.com/sqs/status/2120113139996086409) (unverified)
+
+<a id="prune-old-agent-transcripts"></a>
+
+### Audit and prune old AI agent transcripts on macOS
+
+The user wants to review and remove old coding-agent transcripts, session logs, and leftover editor folders on a Mac.
+
+```text
+Audit my Mac for AI agent transcripts (Claude, Codex, Cursor, Grok), SQLite session logs, and leftover editor dotfolders older than 30 days. Show me the sizes first, delete everything >30 days old, and add a daily 30-day auto-prune check.
+```
+
+Source: [@illyism](https://x.com/illyism/status/2117103631564689691) (verified)
 
 ## Agent workflows and retrospectives
 

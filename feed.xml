@@ -120,6 +120,19 @@ This product is being used by thousands of customers, do not cut any corners.&lt
       <category>visuals</category>
     </item>
     <item>
+      <title>Map the codebase into ARCHITECTURE.md</title>
+      <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#map-codebase-architecture</link>
+      <guid isPermaLink="false">urn:prompt-collection:map-codebase-architecture</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;A project has grown messy and you want a written map of its structure, data flow, and riskiest files.&lt;/p&gt;&lt;pre&gt;Map this codebase for me. Show the folder structure, what each main file does, how data flows from UI to database, and the 5 riskiest files to touch. Write it all to ARCHITECTURE.md.&lt;/pre&gt;&lt;p&gt;Source: &lt;a href="https://x.com/mdjunaidap/status/2119844974019973308"&gt;@mdjunaidap&lt;/a&gt; (unverified)&lt;/p&gt;</description>
+      <category>Codebase audits and simplification</category>
+      <category>architecture</category>
+      <category>documentation</category>
+      <category>onboarding</category>
+      <category>codebase-map</category>
+      <category>data-flow</category>
+    </item>
+    <item>
       <title>Recover the minimal semantic model</title>
       <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#minimal-semantic-model</link>
       <guid isPermaLink="false">urn:prompt-collection:minimal-semantic-model</guid>
@@ -183,6 +196,18 @@ This is an editorial summary. Read the linked gist for the complete workflow.&lt
       <category>responsive</category>
       <category>design-system</category>
       <category>read-only</category>
+    </item>
+    <item>
+      <title>Audit and prune old AI agent transcripts on macOS</title>
+      <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#prune-old-agent-transcripts</link>
+      <guid isPermaLink="false">urn:prompt-collection:prune-old-agent-transcripts</guid>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;The user wants to review and remove old coding-agent transcripts, session logs, and leftover editor folders on a Mac.&lt;/p&gt;&lt;pre&gt;Audit my Mac for AI agent transcripts (Claude, Codex, Cursor, Grok), SQLite session logs, and leftover editor dotfolders older than 30 days. Show me the sizes first, delete everything &amp;gt;30 days old, and add a daily 30-day auto-prune check.&lt;/pre&gt;&lt;p&gt;Source: &lt;a href="https://x.com/illyism/status/2117103631564689691"&gt;@illyism&lt;/a&gt; (verified)&lt;/p&gt;</description>
+      <category>Security and system cleanup</category>
+      <category>macos</category>
+      <category>cleanup</category>
+      <category>transcripts</category>
+      <category>agents</category>
     </item>
     <item>
       <title>Read-only codebase simplification audit (summary)</title>
