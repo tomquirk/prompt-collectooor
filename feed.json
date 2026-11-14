@@ -7,6 +7,41 @@
   "language": "en",
   "items": [
     {
+      "id": "urn:prompt-collection:fresh-eyes-domain-audit",
+      "url": "https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#fresh-eyes-domain-audit",
+      "title": "Fresh-eyes due-diligence audit of a live domain",
+      "content_text": "Visit [domain] like a strict enterprise buyer doing due diligence. Check DNS records, every footer/legal link, public JS bundles, and onboarding pages, and give me a checklist of anything broken or sloppy.",
+      "summary": "The user wants an outside-in check of a live site or product, run from an empty folder with no repo access, to catch broken links, stale subdomains, and sloppy public pages.",
+      "date_published": "2026-11-14T00:00:00+00:00",
+      "tags": [
+        "Codebase audits and simplification",
+        "web",
+        "dns",
+        "legal-links",
+        "due-diligence",
+        "external-audit"
+      ],
+      "_prompt": {
+        "id": "fresh-eyes-domain-audit",
+        "category": "Codebase audits and simplification",
+        "use_when": "The user wants an outside-in check of a live site or product, run from an empty folder with no repo access, to catch broken links, stale subdomains, and sloppy public pages.",
+        "scope": "project",
+        "added_on": "2026-11-14",
+        "source": {
+          "url": "https://x.com/illyism/status/2121301002490192378",
+          "author": "@illyism",
+          "status": "verified"
+        },
+        "text_kind": "collected"
+      },
+      "external_url": "https://x.com/illyism/status/2121301002490192378",
+      "authors": [
+        {
+          "name": "@illyism"
+        }
+      ]
+    },
+    {
       "id": "urn:prompt-collection:browser-testing",
       "url": "https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#browser-testing",
       "title": "Browser testing across widths, touch, and slow networks",

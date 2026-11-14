@@ -105,6 +105,18 @@ Map this codebase for me. Show the folder structure, what each main file does, h
 
 Source: [@mdjunaidap](https://x.com/mdjunaidap/status/2119844974019973308) (unverified)
 
+<a id="fresh-eyes-domain-audit"></a>
+
+### Fresh-eyes due-diligence audit of a live domain
+
+The user wants an outside-in check of a live site or product, run from an empty folder with no repo access, to catch broken links, stale subdomains, and sloppy public pages.
+
+```text
+Visit [domain] like a strict enterprise buyer doing due diligence. Check DNS records, every footer/legal link, public JS bundles, and onboarding pages, and give me a checklist of anything broken or sloppy.
+```
+
+Source: [@illyism](https://x.com/illyism/status/2121301002490192378) (verified)
+
 ## State machines and semantics
 
 <a id="find-state-machines"></a>

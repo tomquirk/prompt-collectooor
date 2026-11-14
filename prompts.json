@@ -458,6 +458,27 @@
         "author": "@illyism",
         "status": "verified"
       }
+    },
+    {
+      "id": "fresh-eyes-domain-audit",
+      "title": "Fresh-eyes due-diligence audit of a live domain",
+      "category": "Codebase audits and simplification",
+      "tags": [
+        "web",
+        "dns",
+        "legal-links",
+        "due-diligence",
+        "external-audit"
+      ],
+      "use_when": "The user wants an outside-in check of a live site or product, run from an empty folder with no repo access, to catch broken links, stale subdomains, and sloppy public pages.",
+      "scope": "project",
+      "added_on": "2026-11-14",
+      "prompt": "Visit [domain] like a strict enterprise buyer doing due diligence. Check DNS records, every footer/legal link, public JS bundles, and onboarding pages, and give me a checklist of anything broken or sloppy.",
+      "source": {
+        "url": "https://x.com/illyism/status/2121301002490192378",
+        "author": "@illyism",
+        "status": "verified"
+      }
     }
   ]
 }
