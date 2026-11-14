@@ -7,6 +7,19 @@
     <language>en</language>
     <atom:link href="https://raw.githubusercontent.com/tomquirk/prompt-collection/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Fresh-eyes due-diligence audit of a live domain</title>
+      <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#fresh-eyes-domain-audit</link>
+      <guid isPermaLink="false">urn:prompt-collection:fresh-eyes-domain-audit</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 GMT</pubDate>
+      <description>&lt;p&gt;The user wants an outside-in check of a live site or product, run from an empty folder with no repo access, to catch broken links, stale subdomains, and sloppy public pages.&lt;/p&gt;&lt;pre&gt;Visit [domain] like a strict enterprise buyer doing due diligence. Check DNS records, every footer/legal link, public JS bundles, and onboarding pages, and give me a checklist of anything broken or sloppy.&lt;/pre&gt;&lt;p&gt;Source: &lt;a href="https://x.com/illyism/status/2121301002490192378"&gt;@illyism&lt;/a&gt; (verified)&lt;/p&gt;</description>
+      <category>Codebase audits and simplification</category>
+      <category>web</category>
+      <category>dns</category>
+      <category>legal-links</category>
+      <category>due-diligence</category>
+      <category>external-audit</category>
+    </item>
+    <item>
       <title>Browser testing across widths, touch, and slow networks</title>
       <link>https://github.com/tomquirk/prompt-collection/blob/main/PROMPTS.md#browser-testing</link>
       <guid isPermaLink="false">urn:prompt-collection:browser-testing</guid>
